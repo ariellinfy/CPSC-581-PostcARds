@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.2.0/socket.io.js"></script>
+
+  </head>
+  <body>
+    <a-scene id="ar-vr-scene">
+      <!-- put sender's example code, hard coded stuff -->
+        <a-box id="example-object" position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+        <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+        <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+    </a-scene>
+
+    <a-scene id="receiver-scene">
+      <!-- put receiver's example code, hard coded stuff -->
+        <a-sky color="#ECECEC"></a-sky>
+        <a-entity position="0 0 0">
+          <a-camera>
+            <a-cursor>
+                <a-entity position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat"></a-entity>
+            </a-cursor>
+          </a-camera>
+        </a-entity>
+    </a-scene>
+    <script src="././js/client.js"></script>
+  </body>
+</html>

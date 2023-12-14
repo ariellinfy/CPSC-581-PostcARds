@@ -8,25 +8,26 @@ const server = http.createServer(app);
 
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/login.html');
+    res.sendFile(__dirname + '/src/pages/login.html');
 });
 
 // app.get("/main", (req, res) => {
 //   res.sendFile(__dirname + "/index.html");
 // });
 
-http.listen(3000, () => {
-  console.log("connected at 3000");
+server.listen(3000, () => {
+  console.log("Server connected at 3000");
 });
 
-io.on("connection", socket => {
+io.on("connection", (socket) => {
   console.log("a user connected!!");
 
-  socket.on("data", msg => {
+  socket.on("data", (msg) => {
+    console.log("Received update from user: ", msg);
     io.emit("data", msg);
   });
 
-  socket.on("disconnect", msg => {
+  socket.on("disconnect", () => {      // () <-> msg; check what works
     console.log("user disconnected");
   });
 });
