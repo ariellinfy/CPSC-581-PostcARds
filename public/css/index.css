@@ -21,7 +21,7 @@ a-scene {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   border-radius: 5px;
-  padding: 0px 16px 10px 16px;
+  padding: 0px 12px 10px 12px;
   background-color: white;
   width: 250px;
 }
