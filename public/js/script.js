@@ -28,7 +28,6 @@ const handleImageChange = async (files) => {
   const selectedFile = document.getElementById("img-input");
   const imageSrc = await readImageFile(selectedFile.files[0]);
   const image = await createHTMLImageElement(imageSrc);
-  //console.log(imageSrc);
   $('#img-output').attr('src', imageSrc);
   
   const modelURL = URL + "model.json";
@@ -41,9 +40,12 @@ const handleImageChange = async (files) => {
   let result = "";
 
   for (let i = 0; i < maxPredictions; i++) {
-    if (prediction[i].probability.toFixed(2) > 0.75) {
+    if (prediction[i].probability.toFixed(2) > 0.4) {
       result = prediction[i].className;
+      
+      $("#result").text("prediction: " + result);
     }
   }
+  
   console.log(result);
 };
