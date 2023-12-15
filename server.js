@@ -3,9 +3,12 @@ var express = require('express');
 var app = express();
 const http = require('http');
 const io = require('socket.io')(http);
+
+
 app.use(express.static('public'));
 const server = http.createServer(app);
 
+app.use(express.static(path.join(__dirname, "src")));
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/src/pages/login.html');
