@@ -50,7 +50,6 @@
           Create
         </button>
     </div>
-
   </body>
 
   <script>
@@ -67,7 +66,13 @@
       $("#preview-gltf").attr("scale", scale);
     });
     
-
+    var textArea = document.getElementById("message");
+    var aText = document.getElementById("preview-txt");
+    textArea.addEventListener('input', () => {
+      text = textArea.value;
+      aText.setAttribute('value', text);
+    });
+    
     var address = window.location.href;
     var root = address.substring(0, address.lastIndexOf("/") + 1);
     var who = address.substring(address.lastIndexOf("=") + 1);
@@ -104,13 +109,5 @@
         }
       });
     });
-    
-    var textArea = document.getElementById("message");
-    var aText = document.getElementById("preview-txt");
-    textArea.addEventListener('input', () => {
-      text = textArea.value;
-      aText.setAttribute('value', text);
-    });
-    
   </script>
 </html>

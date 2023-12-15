@@ -2,14 +2,10 @@ const path = require("path");
 var express = require('express');
 const http = require('http');
 
-// const ejs = require('ejs');
-
 var app = express();
 const server = http.createServer(app);
 const io = require('socket.io')(server);
-// const io = socketIo(server);
 
-// app.set('view engine', 'ejs');
 app.set('src', path.join(__dirname, "src"));
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -17,12 +13,16 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/src/pages/index.html');
+    res.sendFile(__dirname + '/src/pages/login.html');
 });
 
-// app.get("/main", (req, res) => {
-//   res.sendFile(__dirname + "/index.html");
-// });
+app.get("/new", (req, res) => {
+  res.sendFile(__dirname + "/src/pages/create.html");
+});
+
+app.get("/lobby", (req, res) => {
+  res.sendFile(__dirname + "/src/pages/lobby.html");
+});
 
 app.get('/create', (req, res) => {
   res.sendFile(__dirname + '/src/pages/create.html');
