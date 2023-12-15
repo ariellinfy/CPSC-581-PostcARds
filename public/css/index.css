@@ -34,3 +34,7 @@ a-scene {
   height: 12rem;
   width: 15rem;
 }
+
+.text-bold {
+  font-weight: bold;
+}

@@ -81,12 +81,14 @@
         var landmarkEntity = $(`<a-entity class="preview-gltf" position="0 0 -6" scale = "0.15 0.15 0.15" gltf-model=${src}></a-entity>`);
         var landmarkText = $(`<a-text value=${postcard.message} scale="2 2 1" color="black" position="-5 -2 -6" width="5" wrap-count="30"></a-text>`);
         var messageText = $(`<div>${postcard.message}</div>`);
+        var userText = $(`<div>from <span class="text-bold">${postcard.username}</span></div>`);
         
         landmarkScene.append(landmarkEntity);
         landmarkScene.append(landmarkText);
         
         cardBlock.append(landmarkScene);
         cardBlock.append(messageText);
+        cardBlock.append(userText);
         
         $('#collections').append(cardBlock);
       }
