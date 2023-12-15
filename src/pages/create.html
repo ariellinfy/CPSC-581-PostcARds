@@ -1,30 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <title>AR Postcard</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.2.0/socket.io.js"></script>
-
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    
+    <link rel="stylesheet" href="css/create.css">
+    <script type="text/javascript" src="js/landmarks.js"></script>
   </head>
-  <body>
-    <a-scene id="ar-vr-scene">
-      <!-- put sender's example code, hard coded stuff -->
-        <a-box id="example-object" position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-        <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-        <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-    </a-scene>
+  <body class="page-wrapper">
+    <h1>Create Your Postcard</h1>
+    <div class="landmark-wrapper">
+        <label for="story">Landmark:</label>
+        <select id="select-landmark"></select>
+        <a-scene embedded>
+            <a-entity id="preview-gltf" position="0 0 -2" gltf-model="https://cdn.glitch.global/b6cc52eb-8940-49af-b06a-62627d26291c/tree.glb?v=1702588013160"></a-entity>
+        </a-scene> 
+    </div>
+    
+    <div class="message-wrapper">
+        <label for="story">Your Message:</label>
+        <textarea id="story" name="story" rows="5" cols="50" placeholder="message..."></textarea>
+    </div>
 
-    <a-scene id="receiver-scene">
-      <!-- put receiver's example code, hard coded stuff -->
-        <a-sky color="#ECECEC"></a-sky>
-        <a-entity position="0 0 0">
-          <a-camera>
-            <a-cursor>
-                <a-entity position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat"></a-entity>
-            </a-cursor>
-          </a-camera>
-        </a-entity>
-    </a-scene>
-    <script src="client.js"></script>
+    <div class="button-wrapper">
+        <button class="button-38" role="button" id="backBtn">
+          Back
+        </button>
+        <button class="button-38" role="button" id="createBtn">
+          Create
+        </button>
+    </div>
+
   </body>
+
+  <script>
+    Object.keys(Landmarks).forEach(landmark => {
+      console.log(landmark)
+      $("#select-landmark").append(`<option value="${landmark}">${landmark.charAt(0).toUpperCase() + landmark.slice(1)}</option>`)
+    })
+    
+    $("#select-landmark").change(function(e) {
+      var selected = $("#select-landmark :selected").val()     
+      var res = Landmarks[selected]["previewUrl"]
+      $("#preview-gltf").attr("gltf-model", res);
+    });
+  </script>
 </html>

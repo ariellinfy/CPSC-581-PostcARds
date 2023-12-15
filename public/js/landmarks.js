@@ -25,7 +25,7 @@ const Landmarks = {
   },
   "australia": {
     previewUrl: "",
-    baseUrl: ""
+    baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/sydneyOHouse.glb?v=1702604713757"
   },
   "japan": {
     previewUrl: "",
