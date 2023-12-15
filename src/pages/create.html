@@ -23,10 +23,17 @@
         <select id="select-landmark" name="select-landmark"></select>
         <a-scene background="color: #FAFAFA" embedded>
           <a-entity id="preview-gltf" 
-                    position="0 0 -5" 
+                    position="0 0 -6" 
                     gltf-model="https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/eiffel.glb?v=1702601607283"
                     scale = "0.15 0.15 0.15">
           </a-entity>
+          <a-text value="" 
+                  scale="2 2 1" 
+                  color="black"
+                  position="-5 -2 -6"
+                  width="5"
+                  wrap-count="30">
+          </a-text>
         </a-scene> 
     </div>
     
@@ -59,5 +66,7 @@
       $("#preview-gltf").attr("gltf-model", res);
       $("#preview-gltf").attr("scale", scale);
     });
+    
+    $(message)
   </script>
 </html>

@@ -42,7 +42,7 @@ const Landmarks = {
   "japan": {
     previewUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/fushimi_inari_taisha.glb?v=1702605227729",
     baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/fushimi_inari_taisha.glb?v=1702605227729",
-    previewScale: "0.09 0.09 0.09"
+    previewScale: "0.07 0.07 0.07"
   },
   "brazil": {
     previewUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/christ_the_redeemer_cristo_redentor.glb?v=1702605683534",
