@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/create.css">
     <script type="text/javascript" src="js/landmarks.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    
+<!--     <script src="/socket.io/socket.io.js"></script> -->
   </head>
   <body>
     <h1>Create Your Postcard</h1>
@@ -39,7 +38,7 @@
     
     <div class="message-wrapper">
         <label for="message">Your Message:</label>
-        <textarea id="message" name="message" rows="5" cols="50" placeholder="message..."></textarea>
+        <textarea id="input-message" name="message" rows="5" cols="50" placeholder="message..."></textarea>
     </div>
 
     <div class="button-wrapper">
@@ -66,13 +65,15 @@
       $("#preview-gltf").attr("scale", scale);
     });
     
-    var textArea = document.getElementById("message");
+    var textArea = document.getElementById("input-message");
     var aText = document.getElementById("preview-txt");
     textArea.addEventListener('input', () => {
       text = textArea.value;
       aText.setAttribute('value', text);
     });
     
+    var socket = io();
+    socket.connect("https://ar-postcards.glitch.me/:3000");
     var address = window.location.href;
     var root = address.substring(0, address.lastIndexOf("/") + 1);
     var who = address.substring(address.lastIndexOf("=") + 1);
@@ -92,19 +93,19 @@
         var userName = who;
         var landmark = $("#select-landmark").val();
         var message = $("#input-message").val();
-
-        if (userName) {          
-          var data = {
+        
+        if (userName) {
+          var newPostcard = {
             username: userName,
             landmark: landmark,
-            message: message
+            message: message,
+            timestamp: Date.now()
           }
-          
-          // allPostcards[] = "";
-          // socket.emit("new-postcard", data);
+
+          socket.emit("new-postcard", newPostcard);
           
           // redirect to address with query parameters room for socket
-          var join = root + "lobby" + `?name=${who}`;
+          var join = root + "lobby" + `?name=${userName}`;
           window.location.href = join;
         }
       });

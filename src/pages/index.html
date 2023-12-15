@@ -11,11 +11,12 @@
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="js/landmarks.js"></script>
   </head>
   <body>
     <h1>Postcard Collections</h1>
-    <div class="album-wrapper">
-        <div class="postcard">
+    <div id="collections" class="album-wrapper">
+<!--         <div class="postcard">
           <a-scene background="color: #FFFFFF" embedded>
             <a-entity class="preview-gltf" position="0 0 -6" scale = "0.15 0.15 0.15" gltf-model="https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/eiffel.glb?v=1702601607283"></a-entity>
             <a-text value="The Eiffel Tower is as magnificent as they say - breathtaking views that make me feel like I'm on top of the world! --- from Sarah" 
@@ -44,12 +45,49 @@
           <div>
             The Eiffel Tower is as magnificent as they say - breathtaking views that make me feel like I'm on top of the world! --- from Sarah
           </div>
-        </div>
+        </div> -->
     </div>
   </body>
   <script>
       var socket = io();
       socket.connect("https://ar-postcards.glitch.me/:3000");
     
+      var address = window.location.href;
+      var isQuery = address.lastIndexOf("=");
+      var who = "";
+      if (isQuery !== -1){
+        who = address.substring(isQuery + 1);
+      }
+
+      if (who) {
+        socket.emit("new-user", who);
+      }
+    
+      socket.on("user-joined", postcards => {
+        console.log(postcards);
+        postcards.forEach((postcard, i) => {
+          addPostcard(postcard);
+        })
+      });
+    
+      function addPostcard(postcard) {
+        
+        var src = Landmarks[postcard.landmark]["baseUrl"];
+        console.log(src);
+        
+        var cardBlock = $(`<div class="postcard"></div>`);
+        var landmarkScene = $(`<a-scene background="color: #FFFFFF" embedded></a-scene>`);
+        var landmarkEntity = $(`<a-entity class="preview-gltf" position="0 0 -6" scale = "0.15 0.15 0.15" gltf-model=${src}></a-entity>`);
+        var landmarkText = $(`<a-text value=${postcard.message} scale="2 2 1" color="black" position="-5 -2 -6" width="5" wrap-count="30"></a-text>`);
+        var messageText = $(`<div>${postcard.message}</div>`);
+        
+        landmarkScene.append(landmarkEntity);
+        landmarkScene.append(landmarkText);
+        
+        cardBlock.append(landmarkScene);
+        cardBlock.append(messageText);
+        
+        $('#collections').append(cardBlock);
+      }
   </script>
 </html>
