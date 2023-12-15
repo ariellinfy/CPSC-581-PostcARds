@@ -15,16 +15,16 @@
   <body class="page-wrapper">
     <h1>Create Your Postcard</h1>
     <div class="landmark-wrapper">
-        <label for="story">Landmark:</label>
-        <select id="select-landmark"></select>
+        <label for="select-landmark">Landmark:</label>
+        <select id="select-landmark" name="select-landmark"></select>
         <a-scene embedded>
             <a-entity id="preview-gltf" position="0 0 -2" gltf-model="https://cdn.glitch.global/b6cc52eb-8940-49af-b06a-62627d26291c/tree.glb?v=1702588013160"></a-entity>
         </a-scene> 
     </div>
     
     <div class="message-wrapper">
-        <label for="story">Your Message:</label>
-        <textarea id="story" name="story" rows="5" cols="50" placeholder="message..."></textarea>
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="5" cols="50" placeholder="message..."></textarea>
     </div>
 
     <div class="button-wrapper">
