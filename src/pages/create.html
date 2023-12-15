@@ -27,13 +27,17 @@
         });
     </script>
   </head>
-  <body id="editable" contenteditable="true" onblur="updateContent()">
+  <body id="editable" onblur="updateContent()">
     <h1>Create Your Postcard</h1>
     <div class="landmark-wrapper">
         <label for="select-landmark">Landmark:</label>
         <select id="select-landmark" name="select-landmark"></select>
         <a-scene embedded>
-            <a-entity id="preview-gltf" position="0 0 -2" gltf-model="https://cdn.glitch.global/b6cc52eb-8940-49af-b06a-62627d26291c/tree.glb?v=1702588013160"></a-entity>
+          <a-entity id="preview-gltf" 
+                    position="0 0 -2" 
+                    gltf-model="https://cdn.glitch.global/b6cc52eb-8940-49af-b06a-62627d26291c/tree.glb?v=1702588013160"
+                    scale = "">
+          </a-entity>
         </a-scene> 
     </div>
     
@@ -62,6 +66,7 @@
     $("#select-landmark").change(function(e) {
       var selected = $("#select-landmark :selected").val()     
       var res = Landmarks[selected]["previewUrl"]
+      var scale = Landmarks[selected]["scale"]
       $("#preview-gltf").attr("gltf-model", res);
     });
   </script>

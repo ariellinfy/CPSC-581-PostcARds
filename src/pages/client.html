@@ -8,11 +8,11 @@
     <script>
         var socket = io();
 
-        // function sendMessage() {
-        //     var message = document.getElementById('messageInput').value;
-        //     socket.emit('message', message);
-        //     document.getElementById('messageInput').value = '';
-        // }
+        function sendMessage() {
+            var message = document.getElementById('messageInput').value;
+            socket.emit('message', message);
+            document.getElementById('messageInput').value = '';
+        }
 
         // socket.on('message', function(data) {
         //     var messages = document.getElementById('messages');
@@ -23,9 +23,9 @@
             contentUpdates.innerHTML += '<br>' + data;
         });
 
-        socket.on('contentUpdate', function(data) {
-            document.getElementById('sharedDiv').innerText = data;
-        });
+        // socket.on('contentUpdate', function(data) {
+        //     document.getElementById('contentUpdates').innerText = data;
+        // });
         
     </script>
 </head>
@@ -35,7 +35,6 @@
     <div id="messages"></div>
     <div id="contentUpdates"></div>
 
-    <div id="sharedDiv"></div>
 
 </body>
 </html>
