@@ -68,10 +68,9 @@
     });
     
     //var msgString = "";
-    $("message").keyup(function(e) {
+    $("#message").on('input', function() {
       var msgString = $("message").val();
-      
-      console.log("a");
+      console.log(msgString);
     });
   </script>
 </html>
