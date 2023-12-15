@@ -27,26 +27,26 @@ const Landmarks = {
   "india": {
     previewUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/tajmahal.glb?v=1702601640246",
     baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/tajmahal.glb?v=1702601640246",
-    previewScale: "1 1 1"
+    previewScale: "0.3 0.3 0.3"
   },
   "australia": {
-    previewUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/sydneyOHouse.glb?v=1702604713757",
-    baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/sydneyOHouse.glb?v=1702604713757",
-    previewScale: "1 1 1"
+    previewUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/sydneyOHouse.glb?v=1702619275007",
+    baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/sydneyOHouse.glb?v=1702619275007",
+    previewScale: "0.2 0.2 0.2"
   },
   "greece": {
     previewUrl: "https://cdn.glitch.me/e76c002c-c9da-46f1-9730-df8080677b3f/nashville_parthenon.glb?v=1702610574563",
     baseUrl: "https://cdn.glitch.me/e76c002c-c9da-46f1-9730-df8080677b3f/nashville_parthenon.glb?v=1702610574563",
-    previewScale: "1 1 1"
+    previewScale: "0.1 0.1 0.1"
   },
   "japan": {
     previewUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/fushimi_inari_taisha.glb?v=1702605227729",
     baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/fushimi_inari_taisha.glb?v=1702605227729",
-    previewScale: "1 1 1"
+    previewScale: "0.09 0.09 0.09"
   },
   "brazil": {
     previewUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/christ_the_redeemer_cristo_redentor.glb?v=1702605683534",
     baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/christ_the_redeemer_cristo_redentor.glb?v=1702605683534",
-    previewScale: "1 1 1"
+    previewScale: "0.5 0.5 0.5"
   }
 }
