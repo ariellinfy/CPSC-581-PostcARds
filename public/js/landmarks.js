@@ -20,8 +20,8 @@ const Landmarks = {
     previewScale: "0.2 0.2 0.2"
   },
   "mexico": {
-    previewUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/mayan_pyramid.glb?v=1702610751767",
-    baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/mayan_pyramid.glb?v=1702610751767",
+    previewUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/mayan_pyramid.glb?v=1702616964475",
+    baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/mayan_pyramid.glb?v=1702616964475",
     previewScale: "0.25 0.25 0.25"
   },
   "india": {
