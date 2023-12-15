@@ -6,3 +6,4 @@
 - "Christ the Redeemer (Cristo Redentor)" (https://skfb.ly/oNxTM) by Parlin Sitorus is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 - "Heaven Temple" (https://skfb.ly/6Vqt6) by Catipo is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 - "Nashville Parthenon" (https://skfb.ly/o7NM9) by Ayan is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+- "Mayan Pyramid" (https://skfb.ly/opsLB) by MihaiZ is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).

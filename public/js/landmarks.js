@@ -15,9 +15,9 @@ const Landmarks = {
     previewUrl: "",
     baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/heaven_temple.glb?v=1702608328577"
   },
-  "peru": {
+  "mexico": {
     previewUrl: "",
-    baseUrl: ""
+    baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/mayan_pyramid.glb?v=1702610751767"
   },
   "india": {
     previewUrl: "",
@@ -29,7 +29,7 @@ const Landmarks = {
   },
   "greece": {
     previewUrl: "",
-    baseUrl: ""
+    baseUrl: "https://cdn.glitch.me/e76c002c-c9da-46f1-9730-df8080677b3f/nashville_parthenon.glb?v=1702610574563"
   },
   "japan": {
     previewUrl: "",
