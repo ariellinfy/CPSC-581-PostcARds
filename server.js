@@ -1,18 +1,19 @@
 const path = require("path");
 var express = require('express');
 const http = require('http');
-const io = require('socket.io')(http);
+
 // const ejs = require('ejs');
 
 var app = express();
 const server = http.createServer(app);
+const io = require('socket.io')(server);
 // const io = socketIo(server);
 
 // app.set('view engine', 'ejs');
 app.set('src', path.join(__dirname, "src"));
 app.use(express.static(path.join(__dirname, "public")));
 
-
+// html files should be stored in this directory
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
@@ -23,19 +24,27 @@ app.get('/', (req, res) => {
 //   res.sendFile(__dirname + "/index.html");
 // });
 
-server.listen(3000, () => {
-  console.log("Server connected at 3000");
-});
+
 
 io.on("connection", (socket) => {
   console.log("a user connected!!");
 
-  socket.on("data", (msg) => {
+  socket.on('data', (msg) => {
     console.log("Received update from user: ", msg);
-    io.emit("data", msg);
+    io.emit('data', msg);
+  });
+  
+  socket.on('contentChange', (msg) => {
+    io.emit('contentUpdate', msg);
   });
 
-  socket.on("disconnect", () => {      // () <-> msg; check what works
+  socket.on('disconnect', () => {      // () <-> msg; check what works
     console.log("user disconnected");
   });
+});
+
+
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+  console.log("Server connected at 3000");
 });
