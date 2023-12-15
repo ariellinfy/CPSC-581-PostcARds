@@ -53,9 +53,9 @@
     })
     
     $("#select-landmark").change(function(e) {
-      var selected = $("#select-landmark :selected").val()     
-      var res = Landmarks[selected]["previewUrl"]
-      var scale = Landmarks[selected]["scale"]
+      var selected = $("#select-landmark :selected").val();
+      var res = Landmarks[selected]["previewUrl"];
+      var scale = Landmarks[selected]["scale"];
       $("#preview-gltf").attr("gltf-model", res);
     });
   </script>
