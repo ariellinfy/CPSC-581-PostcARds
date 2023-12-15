@@ -27,7 +27,8 @@
                     gltf-model="https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/eiffel.glb?v=1702601607283"
                     scale = "0.15 0.15 0.15">
           </a-entity>
-          <a-text value="" 
+          <a-text id="preview-txt"
+                  value="" 
                   scale="2 2 1" 
                   color="black"
                   position="-5 -2 -6"
@@ -67,11 +68,12 @@
       $("#preview-gltf").attr("scale", scale);
     });
     
-    var text;
     var textArea = document.getElementById("message");
+    var aText = document.getElementById("preview-txt");
     textArea.addEventListener('input', () => {
       text = textArea.value;
-      console.log(text);
+      aText.setAttribute('value', text);
+      //console.log(text);
     });
   </script>
 </html>
