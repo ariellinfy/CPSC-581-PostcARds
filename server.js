@@ -1,14 +1,21 @@
 const path = require("path");
 var express = require('express');
-var app = express();
 const http = require('http');
-const io = require('socket.io')(http);
+const socketIo = require('socket.io')(http);
+const ejs = require('ejs');
+
+var app = express();
+const server = http.createServer(app);
+const io = socketIo(server);
+
+app.set('view engine', 'ejs');
+app.set('src', path.join(__dirname, "src"));
+app.use(express.static(path.join(__dirname, "public")));
 
 
 app.use(express.static('public'));
-const server = http.createServer(app);
 
-app.use(express.static(path.join(__dirname, "src")));
+
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/src/pages/login.html');
