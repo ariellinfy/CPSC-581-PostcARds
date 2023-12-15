@@ -33,6 +33,40 @@
     </div>
   </body>
   <script>
+    $(document).ready(() => {
+      $("#newBtn").click(function() {
+        console.log("creating postcard");
+        console.log(window.location.href);
+        // assign user selected data here for setup
+        var userName = $("#input-username").val();
 
+        if (userName) {
+          // redirect to address with query parameters room for socket
+          var newPostcard =
+            window.location.href +
+            "new" +
+            `?name=${userName}`;
+          window.location.href = newPostcard;
+        }
+      });
+    });
+    
+    $(document).ready(() => {
+      $("#joinBtn").click(function() {
+        console.log("join lobby");
+        console.log(window.location.href);
+        // assign user selected data here for setup
+        var userName = $("#input-username").val();
+
+        if (userName) {
+          // redirect to address with query parameters room for socket
+          var lobby =
+            window.location.href +
+            "lobby" +
+            `?name=${userName}`;
+          window.location.href = lobby;
+        }
+      });
+    });
   </script>
 </html>

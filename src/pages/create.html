@@ -14,7 +14,6 @@
     <script type="text/javascript" src="js/landmarks.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     
-    
   </head>
   <body>
     <h1>Create Your Postcard</h1>
@@ -68,12 +67,50 @@
       $("#preview-gltf").attr("scale", scale);
     });
     
+
+    var address = window.location.href;
+    var root = address.substring(0, address.lastIndexOf("/") + 1);
+    var who = address.substring(address.lastIndexOf("=") + 1);
+    
+    $(document).ready(() => {
+      $("#backBtn").click(function() {
+        var back = root;
+        window.location.href = back;
+      });
+    });
+    
+    $(document).ready(() => {
+      $("#createBtn").click(function() {
+        console.log("creating postcard");
+
+        // assign user selected data here for setup
+        var userName = who;
+        var landmark = $("#select-landmark").val();
+        var message = $("#input-message").val();
+
+        if (userName) {          
+          var data = {
+            username: userName,
+            landmark: landmark,
+            message: message
+          }
+          
+          // allPostcards[] = "";
+          // socket.emit("new-postcard", data);
+          
+          // redirect to address with query parameters room for socket
+          var join = root + "lobby" + `?name=${who}`;
+          window.location.href = join;
+        }
+      });
+    });
+    
     var textArea = document.getElementById("message");
     var aText = document.getElementById("preview-txt");
     textArea.addEventListener('input', () => {
       text = textArea.value;
       aText.setAttribute('value', text);
-      //console.log(text);
     });
+    
   </script>
 </html>
