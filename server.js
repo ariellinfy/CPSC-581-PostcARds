@@ -33,9 +33,7 @@ app.get("/lobby", (req, res) => {
 
 var allPostcards = [];
 
-io.on("connection", (socket) => {
-  console.log("a user connected!!");
-  
+io.on("connection", (socket) => {  
   console.log("a user connected!!" + socket.id);
 
   socket.on("new-postcard", data => {

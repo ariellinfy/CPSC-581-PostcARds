@@ -65,6 +65,7 @@
     
       socket.on("user-joined", postcards => {
         console.log(postcards);
+        $('#collections').empty();
         postcards.forEach((postcard, i) => {
           addPostcard(postcard);
         })
