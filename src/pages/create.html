@@ -21,10 +21,10 @@
     <div class="landmark-wrapper">
         <label for="select-landmark">Landmark:</label>
         <select id="select-landmark" name="select-landmark"></select>
-        <a-scene embedded>
+        <a-scene background="color: #FAFAFA" embedded>
           <a-entity id="preview-gltf" 
-                    position="0 0 -2" 
-                    gltf-model=""
+                    position="0 0 -5" 
+                    gltf-model="https://cdn.glitch.global/b6cc52eb-8940-49af-b06a-62627d26291c/tree.glb?v=1702588013160"
                     scale = "1 1 1">
           </a-entity>
         </a-scene> 
@@ -54,9 +54,10 @@
     
     $("#select-landmark").change(function(e) {
       var selected = $("#select-landmark :selected").val();
-      var res = Landmarks[selected]["previewUrl"];
-      var scale = Landmarks[selected]["scale"];
+      var res = Landmarks[selected]["baseUrl"];
+      var scale = Landmarks[selected]["previewScale"];
       $("#preview-gltf").attr("gltf-model", res);
+      $("#preview-gltf").attr("scale", scale);
     });
   </script>
 </html>
