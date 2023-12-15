@@ -4,11 +4,8 @@ let model, labelContainer, maxPredictions;
 
 const readImageFile = (file) => {
   return new Promise((resolve) => {
-    
     const reader = new FileReader();
-
     reader.onload = () => resolve(reader.result);
-
     reader.readAsDataURL(file);
   });
 };
@@ -16,11 +13,8 @@ const readImageFile = (file) => {
 const createHTMLImageElement = (imageSrc) => {
   return new Promise((resolve) => {
     const img = new Image();
-
     img.onload = () => resolve(img);
-
     img.src = imageSrc;
-    
   });
 };
 
@@ -49,3 +43,4 @@ const handleImageChange = async (files) => {
   
   console.log(result);
 };
+
