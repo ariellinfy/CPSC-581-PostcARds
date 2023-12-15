@@ -10,45 +10,29 @@
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     
     <link rel="stylesheet" href="css/style.css">
-    
+    <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
-    <a-scene>
-      <a-camera>
-        <a-cursor click-event></a-cursor>
-      </a-camera>
-      <a-assets>
-        <!-- Download from https://github.com/8thwall/web/blob/master/examples/aframe/placeground/tree.glb -->ac
-        <a-asset-item id="treeModel" src="https://cdn.glitch.global/b6cc52eb-8940-49af-b06a-62627d26291c/tree.glb?v=1702588013160"></a-asset-item>
-<!--         // stored several models -> allow user selection -->
-      </a-assets>
-      
-    <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" shadow></a-plane>
-    </a-scene>
-
-    <script>
-      AFRAME.registerComponent('click-event', {
-        init() {
-          this.el.addEventListener('click', (event) => {
-            // should call socket.emit("data", "postcard info")
-          })
-        }
-      })
-    </script>
-
+    <h1>Postcard Collections</h1>
+    <div class="album-wrapper">
+        <div class="postcard">
+          <a-scene embedded>
+            <a-entity class="preview-gltf" position="0 0 -5" scale = "0.15 0.15 0.15" gltf-model="https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/eiffel.glb?v=1702601607283"></a-entity>
+            <!--     message         -->
+          </a-scene>
+          <div>
+            The Eiffel Tower is as magnificent as they say - breathtaking views that make me feel like I'm on top of the world! --- from Sarah
+          </div>
+        </div>
+        <div class="postcard">
+          <a-scene embedded>
+            <a-entity class="preview-gltf" position="0 0 -5" scale = "0.15 0.15 0.15" gltf-model="https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/eiffel.glb?v=1702601607283"></a-entity>
+            <!--     message         -->
+          </a-scene>
+          <div>
+            The Eiffel Tower is as magnificent as they say - breathtaking views that make me feel like I'm on top of the world! --- from Sarah
+          </div>
+        </div>
+    </div>
   </body>
-<!--   <script type="text/javascript" src="js/script.js"></script> -->
-  <script>
-      var socket = io();
-      socket.connect("https://ar-postcard-testing.glitch.me/:3000");
-      socket.emit("data", "sending data");
-      socket.on("data", d => {
-        const newElement = document.createElement('a-entity')
-            let position = event.detail.intersection.point
-            console.log(position)
-            newElement.setAttribute('position', position)
-            newElement.setAttribute('gltf-model', '#treeModel')
-            this.el.sceneEl.appendChild(newElement)
-                             });
-  </script>
 </html>

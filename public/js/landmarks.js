@@ -2,7 +2,7 @@ const Landmarks = {
   "france": {
     previewUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/eiffel.glb?v=1702601607283",
     baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/eiffel.glb?v=1702601607283",
-    previewScale: "0.2 0.2 0.2"
+    previewScale: "0.15 0.15 0.15"
   },
   "italy": {
     previewUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/colosseum.glb?v=1702602238137",
@@ -12,7 +12,7 @@ const Landmarks = {
   "usa": {
     previewUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/sofliberty.glb?v=1702601787071",
     baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/sofliberty.glb?v=1702601787071",
-    previewScale: "0.25 0.25 0.25"
+    previewScale: "0.20 0.20 0.20"
   },
   "china": {
     previewUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/heaven_temple.glb?v=1702608328577",
