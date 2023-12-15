@@ -67,6 +67,11 @@
       $("#preview-gltf").attr("scale", scale);
     });
     
-    $(message)
+    //var msgString = "";
+    $("message").keyup(function(e) {
+      var msgString = $("message").val();
+      
+      console.log("a");
+    });
   </script>
 </html>
