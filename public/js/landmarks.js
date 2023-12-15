@@ -33,6 +33,6 @@ const Landmarks = {
   },
   "brazil": {
     previewUrl: "",
-    baseUrl: ""
+    baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/christ_the_redeemer_cristo_redentor.glb?v=1702605683534"
   }
 }

@@ -3,3 +3,4 @@
 - "Colosseum" (https://skfb.ly/osBJZ) by giga is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 - "Sydney Opera House" (https://skfb.ly/6RBrv) by Nick Reinhardt is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 - "Fushimi Inari Taisha" (https://skfb.ly/6X8zP) by myng988 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+- "Christ the Redeemer (Cristo Redentor)" (https://skfb.ly/oNxTM) by Parlin Sitorus is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
