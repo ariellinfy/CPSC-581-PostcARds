@@ -67,10 +67,11 @@
       $("#preview-gltf").attr("scale", scale);
     });
     
-    //var msgString = "";
-    $("#message").on('input', function() {
-      var msgString = $("message").val();
-      console.log(msgString);
+    var text;
+    var textArea = document.getElementById("message");
+    textArea.addEventListener('input', () => {
+      text = textArea.value;
+      console.log(text);
     });
   </script>
 </html>
