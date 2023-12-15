@@ -24,7 +24,9 @@ app.get('/', (req, res) => {
 //   res.sendFile(__dirname + "/index.html");
 // });
 
-
+app.get('/create', (req, res) => {
+  res.sendFile(__dirname + '/src/pages/create.html');
+});
 
 io.on("connection", (socket) => {
   console.log("a user connected!!");

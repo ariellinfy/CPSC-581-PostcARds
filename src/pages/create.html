@@ -16,12 +16,18 @@
     
     <script>
       var socket = io();
-      function makeChange(){
-        var change = ""
-      }
+      function updateContent(){
+        var newContent = document.getElementById('editable').innerText;
+            socket.emit('contentChange', newContent);
+        }
+
+        // listen for changes from the server
+        socket.on('contentUpdate', function(data) {
+            document.getElementById('editable').innerText = data;
+        });
     </script>
   </head>
-  <body>
+  <body id="editable" contenteditable="true" onblur="updateContent()">
     <h1>Create Your Postcard</h1>
     <div class="landmark-wrapper">
         <label for="select-landmark">Landmark:</label>

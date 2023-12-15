@@ -1,0 +1,41 @@
+<!-- changes made in create.html will be shown here -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Client Page</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io();
+
+        // function sendMessage() {
+        //     var message = document.getElementById('messageInput').value;
+        //     socket.emit('message', message);
+        //     document.getElementById('messageInput').value = '';
+        // }
+
+        // socket.on('message', function(data) {
+        //     var messages = document.getElementById('messages');
+        //     messages.innerHTML += '<br>' + data;
+        // });
+        socket.on('contentUpdate', function(data) {
+            var contentUpdates = document.getElementById('contentUpdates');
+            contentUpdates.innerHTML += '<br>' + data;
+        });
+
+        socket.on('contentUpdate', function(data) {
+            document.getElementById('sharedDiv').innerText = data;
+        });
+        
+    </script>
+</head>
+<body>
+    <input type="text" id="messageInput" placeholder="Enter your message">
+    <button onclick="sendMessage()">Send Message</button>
+    <div id="messages"></div>
+    <div id="contentUpdates"></div>
+
+    <div id="sharedDiv"></div>
+
+</body>
+</html>
