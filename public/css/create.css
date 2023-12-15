@@ -1,25 +1,5 @@
-/* Import fonts */
-@font-face {
-  font-family: HK Grotesk;
-  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
-    format("opentype");
-}
-@font-face {
-  font-family: HK Grotesk;
-  font-weight: bold;
-  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
-    format("opentype");
-}
-
 body {
-  font-family: HK Grotesk;
   background-color: lightblue;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-items: center;
-  align-items: center;
-
 }
 
 .landmark-wrapper {
@@ -55,73 +35,6 @@ a-scene {
 
 .button-wrapper {
   display: flex;
-  gap: 20px;
+  gap: 3rem;
   margin: 1em;
-}
-
-button,
-label,
-select,
-textarea {
-  font-size: 1rem;
-  letter-spacing: 1px;
-}
-
-select,
-textarea {
-  padding: 10px;
-  max-width: 100%;
-  line-height: 1.5;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  box-shadow: 1px 1px 1px #999;
-}
-
-label {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-/* CSS from https://getcssscan.com/css-buttons-examples */
-.button-38 {
-  background-color: #FFFFFF;
-  border: 0;
-  border-radius: .5rem;
-  box-sizing: border-box;
-  color: #111827;
-  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: .875rem;
-  font-weight: 600;
-  line-height: 1.25rem;
-  padding: .75rem 1rem;
-  text-align: center;
-  text-decoration: none #D1D5DB solid;
-  text-decoration-thickness: auto;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-38:hover {
-  background-color: rgb(249,250,251);
-}
-
-.button-38:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-.button-38:focus-visible {
-  box-shadow: none;
-}
-
-#backBtn {
-  background-color: #FFE7E7;
-}
-
-#createBtn {
-  background-color: #c2fbd7;
 }

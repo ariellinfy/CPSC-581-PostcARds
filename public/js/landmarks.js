@@ -13,7 +13,7 @@ const Landmarks = {
   },
   "china": {
     previewUrl: "",
-    baseUrl: ""
+    baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/heaven_temple.glb?v=1702608328577"
   },
   "peru": {
     previewUrl: "",

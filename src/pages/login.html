@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Chat</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-  <div class="logon">
-    <div>
-          <input type="text" id="username-input" class="login-box-input" placeholder="USERNAME"/>
+  <head>
+    <title>AR Postcard</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.2.0/socket.io.js"></script>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+  </head>
+  <body>
+    <h1>Welcome To AR Postcard!</h1>
+    
+    <div class="section-wrapper">
+        <h2>Enter your name</h2>
+        <input type="text" id="input-username" placeholder="Username" required />
     </div>
-  </div>
-<!--   <script src=""></script> -->
-</body>
+
+    <div class="section-wrapper">
+        <h2>What you like to do?</h2>
+        <div class="button-wrapper">
+            <button class="button-56 primaryBtn" role="button" id="newBtn">
+              New Postcard
+            </button>
+            <button class="button-56 secondaryBtn" role="button" id="joinBtn">
+              View Collections
+            </button>
+        </div>
+    </div>
+  </body>
+  <script>
+
+  </script>
 </html>
