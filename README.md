@@ -1,5 +1,7 @@
 ## Links and Resources
 - [Socket.io documentation](https://socket.io/docs/v4/)
+- [A-Frame](https://aframe.io/)
+- [Teachable Machine](https://teachablemachine.withgoogle.com/)
 - [Music Collab](https://glitch.com/edit/#!/music-collab)
 
 ### GLB files (licensed under Creative Commons Attribution http://creativecommons.org/licenses/by/4.0/)
