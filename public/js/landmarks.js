@@ -2,19 +2,19 @@ const Landmarks = {
   "france": {
     previewUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/eiffel.glb?v=1702601607283",
     baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/eiffel.glb?v=1702601607283",
-    backgroundUrl: "",
+    backgroundUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/france2.jpg?v=1702690199425",
     previewScale: "0.15 0.15 0.15"
   },
   "italy": {
     previewUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/colosseum.glb?v=1702602238137",
     baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/colosseum.glb?v=1702602238137",
-    backgroundUrl: "",
+    backgroundUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/italy.jpg?v=1702690194900",
     previewScale: "1 1 1"
   },
   "usa": {
     previewUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/sofliberty.glb?v=1702601787071",
     baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/sofliberty.glb?v=1702601787071",
-    backgroundUrl: "",
+    backgroundUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/usa.jpg?v=1702690468821",
     previewScale: "0.20 0.20 0.20"
   },
   "china": {
