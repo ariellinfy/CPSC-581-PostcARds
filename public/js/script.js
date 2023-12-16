@@ -37,12 +37,12 @@ const handleImageChange = async (files) => {
   for (let i = 0; i < maxPredictions; i++) {
     if (prediction[i].probability.toFixed(2) > 0.75) {
       result = prediction[i].className;
-      $("#select-landmark").val(result).change();
-      var res = Landmarks[result]["baseUrl"];
-      var scale = Landmarks[result]["previewScale"];
-      $("#preview-gltf").attr("gltf-model", res);
-      $("#preview-gltf").attr("scale", scale);
     }
   }
+  $("#select-landmark").val(result).change();
+  var res = Landmarks[result]["baseUrl"];
+  var scale = Landmarks[result]["previewScale"];
+  $("#preview-gltf").attr("gltf-model", res);
+  $("#preview-gltf").attr("scale", scale);
 };
 
