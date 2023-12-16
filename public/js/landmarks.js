@@ -2,25 +2,25 @@ const Landmarks = {
   "france": {
     previewUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/eiffel.glb?v=1702601607283",
     baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/eiffel.glb?v=1702601607283",
-    backgroundUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/france2.jpg?v=1702690199425",
+    backgroundUrl: "https://live.staticflickr.com/65535/49914382511_f35980bbf8_6k.jpg",
     previewScale: "0.15 0.15 0.15"
   },
   "italy": {
     previewUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/colosseum.glb?v=1702602238137",
     baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/colosseum.glb?v=1702602238137",
-    backgroundUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/italy.jpg?v=1702690194900",
+    backgroundUrl: "https://live.staticflickr.com/789/39493136580_9b62bc0538_6k.jpg",
     previewScale: "1 1 1"
   },
   "usa": {
     previewUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/sofliberty.glb?v=1702601787071",
     baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/sofliberty.glb?v=1702601787071",
-    backgroundUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/usa.jpg?v=1702690468821",
+    backgroundUrl: "https://live.staticflickr.com/4046/4180507749_e5f8b99e5c_5k.jpg",
     previewScale: "0.20 0.20 0.20"
   },
   "china": {
     previewUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/heaven_temple.glb?v=1702608328577",
     baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/heaven_temple.glb?v=1702608328577",
-    backgroundUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/china.jpg?v=1702692257016",
+    backgroundUrl: "https://live.staticflickr.com/4901/39737887023_e9b923e7fc_5k.jpg",
     previewScale: "0.2 0.2 0.2"
   },
   "mexico": {
@@ -32,7 +32,7 @@ const Landmarks = {
   "india": {
     previewUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/tajmahal.glb?v=1702601640246",
     baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/tajmahal.glb?v=1702601640246",
-    backgroundUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/india.jpg?v=1702692501798",
+    backgroundUrl: "https://live.staticflickr.com/60/230134823_e98461411e_b.jpg",
     previewScale: "0.3 0.3 0.3"
   },
   "australia": {
