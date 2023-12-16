@@ -51,9 +51,9 @@
         var landmarkScene = $(`<a-scene background="color: #FFFFFF" embedded></a-scene>`);
         var landmarkAssets = `<a-assets><img id="${postcard.landmark}" src=${backgroundUrl} crossorigin="anonymous"></a-assets>`;
         var landmarkSky = `<a-sky src="#${postcard.landmark}"></a-sky>`;
-        var userText = $(`<a-text class="text-bold" font="https://cdn.aframe.io/fonts/mozillavr.fnt" value="from ${postcard.username}:" scale="1.5 1.5 1" color="lightgray" position="-5 3 -6" width="5"></a-text>`);
+        var userText = $(`<a-text class="text-bold" font="https://cdn.aframe.io/fonts/mozillavr.fnt" value="from ${postcard.username}:" scale="1.5 1.5 1" color="lightgray" position="-5 3 -6" width="5" geometry="primitive:plane"></a-text>`);
         var landmarkEntity = $(`<a-entity class="preview-gltf" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000" position="0 0 -6" scale="${scale}" gltf-model=${baseSrc}></a-entity>`);
-        var landmarkText = $(`<a-text value="${postcard.message}" font="https://cdn.aframe.io/fonts/mozillavr.fnt" scale="2 2 1" color="white" position="-5 -1.5 -6" width="5"></a-text>`);
+        var landmarkText = $(`<a-text value="${postcard.message}" font="https://cdn.aframe.io/fonts/mozillavr.fnt" scale="2 2 1" color="white" position="-5 -1.5 -6" width="5" geometry="primitive:circle"></a-text>`);
         
         landmarkScene.append(landmarkAssets);
         landmarkScene.append(userText);
