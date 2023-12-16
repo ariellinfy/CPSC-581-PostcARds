@@ -74,6 +74,6 @@ const Landmarks = {
     baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/mcmahon_stadium.glb?v=1702769411046",
     backgroundUrl: "https://live.staticflickr.com/7468/27471731484_b9e85fb95b_k.jpg",
     previewScale: "0.0025 0.0025 0.0025",
-    baseScale: "1 1 1"
+    baseScale: "0.0025 0.0025 0.0025"
   }
 }

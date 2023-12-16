@@ -13,6 +13,11 @@
 - [Heaven Temple](https://skfb.ly/6Vqt6) by Catipo.
 - [Nashville Parthenon](https://skfb.ly/o7NM9) by Ayan.
 - [Mayan Pyramid](https://skfb.ly/opsLB) by MihaiZ.
+- [Mc Mahon Stadium - Calgary](https://sketchfab.com/3d-models/mc-mahon-stadium-calgary-c6266c6dcbfd4ddab29c743b288b2d8f) by luminou_CS (https://sketchfab.com/luminou)
+
+Model License:
+* license type:	SKETCHFAB Editorial (https://sketchfab.com/licenses)
+* requirements:	Use only in connection with events that are newsworthy or of public interest
 
 ### Equirectangular Images (https://www.flickr.com/groups/equirectangular/)
 - [All Paris All Night All Mine](https://www.flickr.com/photos/imrananwar/49914382511/in/photolist-5gZXEX-6pJGCK-6pydnq-4Xj5Xy-2bkRsfo-7CZtny-YWTq5F-2j3LfVV-6WXMyG-2iHYNau-2h24Awx-2dKGdYt-BLbt6J-Gj578-sBibV-8t1vHD-QmhnGA-29h7naV-2k9oqsB-EbmqeR-u5jNZ-D5xAL5-t6oYZ-6UDodW-7Lua4Y-6TJGWi-F9z39-78w4Jj-7kp55q-6YoNYk-7LjkuF-5wFE6u-sPZ5Z-7544tt-6pThiQ-7mY7ur-EPKDv-ECt5T-CEvaJ-sCquh-6VgEZB-ErmRG-EtwDd-7nq9u6-7nqciP-6Aa1Wi-6ELpkU-4W1oZC-73P6yM-4SApop) by IMRAN.
@@ -25,3 +30,4 @@
 - [Nashville Parthenon](https://www.flickr.com/photos/9005126@N08/) by LeGrand Alley.
 - [20180326-R0011548](https://www.flickr.com/photos/levin808/41522890904/in/photolist-7kq7AJ-2j9BRqz-26geEQ9-2ntePN) by Lazy Sleepy Kitty.
 - [Barragem do Lago Paranoá, Brasília, DF](https://www.flickr.com/photos/faillace360/52740686982/in/photolist-2omvNMm-2oBVe7T-2nutNjJ-yR1cfe-t4tNhU-yVn6Kw-wvAnfc-wfaV53-wrecdN-wcvpJC-wh51gd-nTsXmA-wnpVMU-nozsgT-5R8nrK-wo7Wnx-wxcebh-92JmxZ-vTL4Zw-vFcK8Q-94YRM4-w2ZMLi-wnvEUF-wHor7i-cjzu4m-wAPQJd-eMiWSj-Tv45iy-cpWNoq-eRQNDA-ePqmLr-eMiWu7-ePqoR4-vNCbPE-eQbRva-eJa58r-ePqkCK-ePBL5q-eGdW5H-6mPaMa-5geESD-eHnnoW-wY8CPT-53xcG6-5R8oxH-5RcFhj-5giHom-6mcpXx-5giQ6d-5giAeC) by Faillace.
+- [FIFA_Estadio_Nacional_GPS](https://www.flickr.com/photos/107901305@N06/27471731484/in/photostream/) by Andrés Martin
