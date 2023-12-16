@@ -1,5 +1,5 @@
 // the link to your model provided by Teachable Machine export panel
-const URL = "https://teachablemachine.withgoogle.com/models/BYir9beXZ/";
+const URL = "https://teachablemachine.withgoogle.com/models/A96IuMWes/";
 let model, labelContainer, maxPredictions;
 
 const readImageFile = (file) => {
@@ -34,7 +34,7 @@ const handleImageChange = async (files) => {
   let result = "";
 
   for (let i = 0; i < maxPredictions; i++) {
-    if (prediction[i].probability.toFixed(2) > 0.4) {
+    if (prediction[i].probability.toFixed(2) > 0.75) {
       result = prediction[i].className;
       
       $("#result").text("prediction: " + result);
