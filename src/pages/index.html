@@ -17,53 +17,68 @@
   <body>
     <h1>Postcard Collections</h1>
     <div id="collections" class="album-wrapper"></div>
+    <button class="button-56 primaryBtn" role="button" id="againBtn">
+      Create Another
+    </button>
   </body>
   
   <script>
-      var socket = io();
-      socket.connect("https://ar-postcards.glitch.me/:3000");
-    
-      var address = window.location.href;
-      var isQuery = address.lastIndexOf("=");
-      var who = "";
-      if (isQuery !== -1){
-        who = address.substring(isQuery + 1);
-      }
+    var socket = io();
+    socket.connect("https://ar-postcards.glitch.me/:3000");
 
-      if (who) {
-        socket.emit("new-user", who);
-      }
-    
-      socket.on("user-joined", postcards => {
-        console.log(postcards);
-        $('#collections').empty();
-        postcards.forEach((postcard, i) => {
-          addPostcard(postcard);
-        });
+    var address = window.location.href;
+    var isQuery = address.lastIndexOf("=");
+    var who = "";
+    if (isQuery !== -1){
+      who = address.substring(isQuery + 1);
+    }
+
+    if (who) {
+      socket.emit("new-user", who);
+    }
+
+    socket.on("user-joined", postcards => {
+      console.log(postcards);
+      $('#collections').empty();
+      postcards.forEach((postcard, i) => {
+        addPostcard(postcard);
       });
+    });
+
+    function addPostcard(postcard) {
+      var baseSrc = Landmarks[postcard.landmark]["baseUrl"];
+      var backgroundUrl = Landmarks[postcard.landmark]["backgroundUrl"];
+      var scale = Landmarks[postcard.landmark]["baseScale"];
+
+      var cardBlock = $(`<div class="postcard"></div>`);
+      var landmarkScene = $(`<a-scene background="color: #FFFFFF" embedded></a-scene>`);
+      var landmarkAssets = `<a-assets><img id="${postcard.landmark}" src=${backgroundUrl} crossorigin="anonymous"></a-assets>`;
+      var landmarkSky = `<a-sky src="#${postcard.landmark}"></a-sky>`;
+      var userText = $(`<a-text class="text-bold" font="https://cdn.aframe.io/fonts/mozillavr.fnt" value="from ${postcard.username}:" scale="1.5 1.5 1" color="lightgray" position="-5 3 -6" width="5" geometry="primitive:plane"></a-text>`);
+      var landmarkEntity = $(`<a-entity class="preview-gltf" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000" position="0 0 -6" scale="${scale}" gltf-model=${baseSrc}></a-entity>`);
+      var landmarkText = $(`<a-text value="${postcard.message}" font="https://cdn.aframe.io/fonts/mozillavr.fnt" scale="2 2 1" color="white" position="-5 -1.5 -6" width="5" geometry="primitive:circle"></a-text>`);
+
+      landmarkScene.append(landmarkAssets);
+      landmarkScene.append(userText);
+      landmarkScene.append(landmarkSky);
+      landmarkScene.append(landmarkEntity);
+      landmarkScene.append(landmarkText);
+
+      cardBlock.append(landmarkScene);
+
+      $('#collections').append(cardBlock);
+    }
     
-      function addPostcard(postcard) {
-        var baseSrc = Landmarks[postcard.landmark]["baseUrl"];
-        var backgroundUrl = Landmarks[postcard.landmark]["backgroundUrl"];
-        var scale = Landmarks[postcard.landmark]["baseScale"];
-        
-        var cardBlock = $(`<div class="postcard"></div>`);
-        var landmarkScene = $(`<a-scene background="color: #FFFFFF" embedded></a-scene>`);
-        var landmarkAssets = `<a-assets><img id="${postcard.landmark}" src=${backgroundUrl} crossorigin="anonymous"></a-assets>`;
-        var landmarkSky = `<a-sky src="#${postcard.landmark}"></a-sky>`;
-        var userText = $(`<a-text class="text-bold" font="https://cdn.aframe.io/fonts/mozillavr.fnt" value="from ${postcard.username}:" scale="1.5 1.5 1" color="lightgray" position="-5 3 -6" width="5" geometry="primitive:plane"></a-text>`);
-        var landmarkEntity = $(`<a-entity class="preview-gltf" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000" position="0 0 -6" scale="${scale}" gltf-model=${baseSrc}></a-entity>`);
-        var landmarkText = $(`<a-text value="${postcard.message}" font="https://cdn.aframe.io/fonts/mozillavr.fnt" scale="2 2 1" color="white" position="-5 -1.5 -6" width="5" geometry="primitive:circle"></a-text>`);
-        
-        landmarkScene.append(landmarkAssets);
-        landmarkScene.append(userText);
-        landmarkScene.append(landmarkSky);
-        landmarkScene.append(landmarkEntity);
-        landmarkScene.append(landmarkText);
-        
-        cardBlock.append(landmarkScene);
-        
-        $('#collections').append(cardBlock);
-      }
+    $(document).ready(() => {
+        $("#againBtn").click(function() {
+          console.log("create another card");
+          console.log(window.location.href);
+          const href = window.location.href;
+          const split = href.split("lobby");
+          // redirect to address with query parameters room for socket
+          var createNew = split[0] + "new" + `?name=${who}`;
+          window.location.href = createNew;
+        }); 
+      }); 
   </script>
 </html>
