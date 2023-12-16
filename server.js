@@ -24,13 +24,6 @@ app.get("/lobby", (req, res) => {
   res.sendFile(__dirname + "/src/pages/index.html");
 });
 
-// app.get('/create', (req, res) => {
-//   res.sendFile(__dirname + '/src/pages/create.html');
-// });
-// app.get('/client', (req, res) => {
-//   res.sendFile(__dirname + '/src/pages/client.html');
-// });
-
 var allPostcards = [];
 
 io.on("connection", (socket) => {  
@@ -44,15 +37,6 @@ io.on("connection", (socket) => {
   socket.on("new-user", data => {
     io.emit("user-joined", allPostcards);
   });
-
-//   socket.on('data', (msg) => {
-//     console.log("Received update from user: ", msg);
-//     io.emit('data', msg);
-//   });
-  
-//   socket.on('contentChange', (msg) => {
-//     io.emit('contentUpdate', msg);
-//   });
 
   socket.on('disconnect', () => {      // () <-> msg; check what works
     console.log("user disconnected");
