@@ -32,13 +32,16 @@
         <img id="img-output" crossorigin="anonymous" />
       
         <a-scene background="color: #FAFAFA" embedded>
-          <a-sky src ="https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/france2.jpg?v=1702690199425"></a-sky>
+          <a-sky id="preview-sky"
+                 src ="https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/france2.jpg?v=1702690199425">
+          </a-sky>
           <a-entity id="preview-gltf" 
                     position="0 0 -6" 
                     gltf-model="https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/eiffel.glb?v=1702601607283"
                     scale = "0.15 0.15 0.15">
           </a-entity>
           <a-text id="preview-txt"
+                  font="https://cdn.aframe.io/fonts/mozillavr.fnt"
                   value="" 
                   scale="2 2 1" 
                   color="white"
@@ -75,9 +78,10 @@
       var selected = $("#select-landmark :selected").val();
       var res = Landmarks[selected]["baseUrl"];
       var scale = Landmarks[selected]["previewScale"];
+      var sky = Landmarks[selected]["backgroundUrl"];
       $("#preview-gltf").attr("gltf-model", res);
       $("#preview-gltf").attr("scale", scale);
-      
+      $('#preview-sky').attr("src", sky);
     });
     
     var textArea = document.getElementById("input-message");
