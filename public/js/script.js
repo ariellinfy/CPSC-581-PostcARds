@@ -1,6 +1,7 @@
 // the link to your model provided by Teachable Machine export panel
 const URL = "https://teachablemachine.withgoogle.com/models/A96IuMWes/";
 let model, labelContainer, maxPredictions;
+let result = "";
 
 const readImageFile = (file) => {
   return new Promise((resolve) => {
@@ -31,16 +32,15 @@ const handleImageChange = async (files) => {
 
   const prediction = await model.predict(image);
 
-  let result = "";
-
   for (let i = 0; i < maxPredictions; i++) {
     if (prediction[i].probability.toFixed(2) > 0.75) {
       result = prediction[i].className;
-      
-      $("#result").text("prediction: " + result);
+      console.log(result);
+      var res = Landmarks[result]["baseUrl"];
+      var scale = Landmarks[result]["previewScale"];
+      $("#preview-gltf").attr("gltf-model", res);
+      $("#preview-gltf").attr("scale", scale);
     }
   }
-  
-  console.log(result);
 };
 

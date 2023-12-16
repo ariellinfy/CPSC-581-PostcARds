@@ -9,6 +9,11 @@ body {
   gap: 10px;
 }
 
+.input-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
 #select-landmark{
   width: 100%;
   margin-bottom: 15px;
