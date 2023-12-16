@@ -68,5 +68,12 @@ const Landmarks = {
     backgroundUrl: "https://live.staticflickr.com/65535/52740686982_ea00afd0df_k.jpg",
     previewScale: "0.7 0.7 0.7",
     baseScale: "0.7 0.7 0.7"
+  },
+  "calgary": {
+    previewUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/mcmahon_stadium.gltf?v=1702766249837",
+    baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/mcmahon_stadium.gltf?v=1702766249837",
+    backgroundUrl: "https://live.staticflickr.com/7468/27471731484_b9e85fb95b_k.jpg",
+    previewScale: "0.7 0.7 0.7",
+    baseScale: "0.7 0.7 0.7"
   }
 }
