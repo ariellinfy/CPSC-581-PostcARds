@@ -16,10 +16,6 @@
   <body>
     <h1>Postcard Collections</h1>
     <div id="collections" class="album-wrapper">
-      <a-scene>
-        <a-assets><img id="paris" src=${backgroundSrc}></a-assets>
-      
-      </a-scene>
 <!--         <div class="postcard">
           <a-scene background="color: #FFFFFF" embedded>
             <a-entity class="preview-gltf" position="0 0 -6" scale = "0.15 0.15 0.15" gltf-model="https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/eiffel.glb?v=1702601607283"></a-entity>
@@ -55,7 +51,6 @@
   <script>
       var socket = io();
       socket.connect("https://ar-postcards.glitch.me/:3000");
-      prepareAssets();
     
       var address = window.location.href;
       var isQuery = address.lastIndexOf("=");
@@ -87,8 +82,16 @@
         var landmarkEntity = $(`<a-entity class="preview-gltf" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000" position="0 0 -6" scale = "0.15 0.15 0.15" gltf-model=${baseSrc}></a-entity>`);
         var landmarkText = $(`<a-text value="${postcard.message}" scale="2 2 1" color="black" position="-5 -1.5 -6" width="5"></a-text>`);
         
+        var landmarkAssets = `<a-assets></a-assets>`;
+        
+        Object.keys(Landmarks).forEach(landmark => {
+          landmarkAssets.append(`<img id="${landmark}" src=${landmark.backgroundUrl}>`);
+        });
+        
+        landmarkScene.append(landmarkAssets);
+        
+        // prepareAssets(landmarkScene);
         landmarkScene.append(userText);
-        // landmarkScene.append(landmarkAsset);
         landmarkScene.append(landmarkSky);
         landmarkScene.append(landmarkEntity);
         landmarkScene.append(landmarkText);
@@ -98,14 +101,15 @@
         $('#collections').append(cardBlock);
       }
     
-      function prepareAssets() {
-        var landmarkScene = $(`<a-scene id="assets" background="color: #FFFFFF" embedded></a-scene>`);
+//       function prepareAssets(landmarkScene) {
         
-        Object.keys(Landmarks).forEach(landmark => {
-          $("#assets").append(`<a-assets><img id="sky" src=${landmark.backgroundUrl}></a-assets>`)
-        });
+//         var landmarkAssets = `<a-assets></a-assets>`;
         
-        $('#collections').append(landmarkScene);
-      }
+//         Object.keys(Landmarks).forEach(landmark => {
+//           landmarkAssets.append(`<img id="${landmark}" src=${landmark.backgroundUrl}>`);
+//         });
+        
+//         landmarkScene.append(landmarkAssets);
+//       }
   </script>
 </html>
