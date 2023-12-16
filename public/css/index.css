@@ -7,6 +7,8 @@ body {
   flex-wrap: wrap;
   gap: 15px;
   padding: 2rem;
+  justify-items: center;
+  align-items: center;
 }
 
 a-scene {
@@ -24,6 +26,8 @@ a-scene {
   padding: 0px 12px 10px 12px;
   background-color: white;
   width: 250px;
+  justify-items: center;
+  align-items: center;
 }
 
 .postcard:hover {

@@ -69,6 +69,7 @@
     })
     
     $("#select-landmark").change(function(e) {
+      $('#img-output').attr('src', "");
       var selected = $("#select-landmark :selected").val();
       var res = Landmarks[selected]["baseUrl"];
       var scale = Landmarks[selected]["previewScale"];
