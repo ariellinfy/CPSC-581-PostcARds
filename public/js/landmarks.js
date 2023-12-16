@@ -26,37 +26,37 @@ const Landmarks = {
   "mexico": {
     previewUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/mayan_pyramid.glb?v=1702616964475",
     baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/mayan_pyramid.glb?v=1702616964475",
-    backgroundUrl: "",
+    backgroundUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/mexico.jpg?v=1702692383601",
     previewScale: "0.25 0.25 0.25"
   },
   "india": {
     previewUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/tajmahal.glb?v=1702601640246",
     baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/tajmahal.glb?v=1702601640246",
-    backgroundUrl: "",
+    backgroundUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/india.jpg?v=1702692501798",
     previewScale: "0.3 0.3 0.3"
   },
   "australia": {
     previewUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/sydneyOHouse.glb?v=1702619275007",
     baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/sydneyOHouse.glb?v=1702619275007",
-    backgroundUrl: "",
+    backgroundUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/australia.jpg?v=1702692623810",
     previewScale: "0.2 0.2 0.2"
   },
   "greece": {
     previewUrl: "https://cdn.glitch.me/e76c002c-c9da-46f1-9730-df8080677b3f/nashville_parthenon.glb?v=1702610574563",
     baseUrl: "https://cdn.glitch.me/e76c002c-c9da-46f1-9730-df8080677b3f/nashville_parthenon.glb?v=1702610574563",
-    backgroundUrl: "",
+    backgroundUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/greece.jpg?v=1702692731908",
     previewScale: "0.1 0.1 0.1"
   },
   "japan": {
     previewUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/fushimi_inari_taisha.glb?v=1702605227729",
     baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/fushimi_inari_taisha.glb?v=1702605227729",
-    backgroundUrl: "",
+    backgroundUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/japan.jpg?v=1702692809919",
     previewScale: "0.07 0.07 0.07"
   },
   "brazil": {
     previewUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/christ_the_redeemer_cristo_redentor.glb?v=1702605683534",
     baseUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/christ_the_redeemer_cristo_redentor.glb?v=1702605683534",
-    backgroundUrl: "",
+    backgroundUrl: "https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/brazil.jpg?v=1702692975298",
     previewScale: "0.5 0.5 0.5"
   }
 }
