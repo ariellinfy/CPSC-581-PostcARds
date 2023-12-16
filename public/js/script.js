@@ -1,3 +1,5 @@
+// Referenced code: https://github.com/TeSheng93/tfjs-mobilenetv3/blob/master/src/App.js
+
 // the link to your model provided by Teachable Machine export panel
 const URL = "https://teachablemachine.withgoogle.com/models/A96IuMWes/";
 let model, labelContainer, maxPredictions;

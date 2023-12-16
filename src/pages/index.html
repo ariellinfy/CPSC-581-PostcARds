@@ -77,11 +77,15 @@
         
         var cardBlock = $(`<div class="postcard"></div>`);
         var landmarkScene = $(`<a-scene background="color: #FFFFFF" embedded></a-scene>`);
+        var landmarkAsset = `<a-assets><img id="sky" src="https://cdn.glitch.global/e76c002c-c9da-46f1-9730-df8080677b3f/france.jpg?v=1702688413821"></a-assets>`;
+        var landmarkSky = `<a-sky src="#sky"></a-sky>`;
         var userText = $(`<a-text class="text-bold" value="from ${postcard.username}:" scale="1.5 1.5 1" color="gray" position="-5 3 -6" width="5"></a-text>`);
         var landmarkEntity = $(`<a-entity class="preview-gltf" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000" position="0 0 -6" scale = "0.15 0.15 0.15" gltf-model=${src}></a-entity>`);
         var landmarkText = $(`<a-text value="${postcard.message}" scale="2 2 1" color="black" position="-5 -1.5 -6" width="5"></a-text>`);
         
         landmarkScene.append(userText);
+        landmarkScene.append(landmarkAsset);
+        landmarkScene.append(landmarkSky);
         landmarkScene.append(landmarkEntity);
         landmarkScene.append(landmarkText);
         
