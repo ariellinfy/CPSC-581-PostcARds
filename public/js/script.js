@@ -39,7 +39,6 @@ const handleImageChange = async (files) => {
       result = prediction[i].className;
     }
   }
-  result = "calgary";
   $("#select-landmark").val(result).change();
   var res = Landmarks[result]["baseUrl"];
   var scale = Landmarks[result]["previewScale"];
